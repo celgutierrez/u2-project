@@ -1,7 +1,11 @@
+require('dotenv').config();
 var express = require('express');
 var ejsLayouts = require('express-ejs-layouts');
 var bodyParser = require('body-parser');
 var session = require('express-session');
+var passport = require('./config/passportConfig');
+var isLoggedIn = require('./middleware/isLoggedIn');
+
 var app = express();
 
 
@@ -13,3 +17,5 @@ app.use(session({
     resave: false,
     saveUninitialized: true
 }));
+
+app.listen(3000);
