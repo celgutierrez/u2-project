@@ -2,14 +2,14 @@
     "development": {
         "username": "postgres",
         "password": "platypus",
-        "database": "bees_db",
+        "database": "bee_db",
         "host": "127.0.0.1",
         "dialect": "postgres"
     },
     "test": {
         "username": "postgres",
         "password": "platypus",
-        "database": "bees-db-test",
+        "database": "bee-db-test",
         "host": "127.0.0.1",
         "dialect": "postgres"
     },
