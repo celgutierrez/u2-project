@@ -23,7 +23,7 @@ passport.use(new localStrategy({
         if (!user || !user.isValidPassword(password)) {
             cb(null, false); //No user or bad password
         } else {
-            cb(null, user); //User is allowed, yay
+            cb(null, user); //User is allowed
         }
     }).catch(cb);
 }));
