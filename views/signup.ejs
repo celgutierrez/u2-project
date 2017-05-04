@@ -1,7 +1,15 @@
-<h1>Start Bee-ing Helpful!</h1>
+<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+<!-- Latest compiled and minified CSS & JS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link href="/css/style.css" rel="stylesheet" type="text/css">
 
+<script src="//code.jquery.com/jquery.js"></script>
+
+<div class="container">
+<div class="row">
+<div class="col-lg-6 col-md-6 col-sm-4 col-xs-12">
+<h1>Start an Account</h1>
 <form action="/auth/signup" method="POST">
-<legend>Create Account</legend>
 <div class="form-group">
 	<input type="text" id="email" name="email" placeholder="Email">
 	</div>
@@ -15,8 +23,12 @@
 	<input type="text" id="lastname" name="lastName" placeholder="Last Name">
 	</div>
 	<button type="submit" class="btn btn-default">Create Account</button>
-
 </form>
-<hr>
-<a class="btn btn-default" href="/auth/facebook"></a>
+</div>
+<div class="col-lg-6 col-md-6 col-sm-4 col-xs-12">
+<h2 class="flower">Or, Facebook is always an option!</h2>
+<a class="btn btn-social btn-facebook" href="/auth/facebook">Login with Facebook!</a>
+</div>
+</div></div>
 
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>

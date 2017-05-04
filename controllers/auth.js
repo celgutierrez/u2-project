@@ -3,14 +3,15 @@ var passport = require('../config/passportConfig');
 var db = require('../models');
 var router = express.Router();
 
-router.get('/login', function(req, res) {
+router.get('/login', function(req, res, next) {
     res.render('login');
 });
 
+
 router.post('/login', passport.authenticate('local', {
-    successRedirect: '/myaccount',
+    successRedirect: '/auth/myaccount',
     successFlash: 'Logging in...',
-    failureRedirect: 'auth/login',
+    failureRedirect: '/auth/login',
     failureFlash: 'Login failed, try again'
 }));
 
@@ -18,20 +19,20 @@ router.get('/signup', function(req, res) {
     res.render('signup');
 });
 
-router.post('/signup', function(req, res) {
+router.post('/signup', function(req, res, next) {
     db.user.findOrCreate({
         where: { email: req.body.email },
         defaults: {
-            'firstName': req.body.firstName,
-            'lastName': req.body.lastName,
+            'firstname': req.body.firstName,
+            'lastname': req.body.lastName,
             'password': req.body.password
         }
     }).spread(function(user, wasCreated) {
         if (wasCreated) {
             passport.authenticate('local', {
-                successRedirect: '/myaccount',
+                successRedirect: '/auth/myaccount',
                 successFlash: 'Welcome to BeeHelpful!',
-                failureRedirect: '/login',
+                failureRedirect: '/auth/login',
                 failureFlash: 'There was an error logging in, please re-try!'
             })(req, res, next);
 
@@ -41,7 +42,8 @@ router.post('/signup', function(req, res) {
         }
     }).catch(function(error) {
         req.flash('error', error.message);
-        res.redirect('auth/signup');
+        console.log('error', error.message);
+        res.redirect('/auth/signup');
     });
 });
 
@@ -60,7 +62,7 @@ router.get('/facebook', passport.authenticate('facebook', {
 
 /// receiving feedback
 router.get('/callback/facebook', passport.authenticate('facebook', {
-    successRedirect: '/profile',
+    successRedirect: '/auth/myaccount',
     successFlash: 'You have logged in with Facebook.',
     failureRedirect: '/auth/login',
     failureFlash: 'Unable to login using Facebook.'

@@ -6,13 +6,14 @@ var bodyParser = require('body-parser');
 var session = require('express-session');
 var passport = require('./config/passportConfig');
 var isLoggedIn = require('./middleware/isLoggedIn');
+// var bower = require('./bower_components/bootstrap-social');
 
 var app = express();
 
 //// Use/Set
 app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/static'));
-
+// app.use(bower);
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(ejsLayouts);
 app.use(session({
@@ -37,10 +38,14 @@ app.get('/', function(req, res) {
     res.render('homepage');
 });
 
-app.get('/myaccount', isLoggedIn, function(req, res) {
-    res.render('myaccount');
-
+app.get('/select', function(req, res) {
+    res.render('select');
 });
+
+app.get('/auth/myaccount', isLoggedIn, function(req, res) {
+    res.render('myaccount');
+});
+
 
 app.use('/auth', require('./controllers/auth'));
 

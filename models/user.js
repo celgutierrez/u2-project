@@ -1,11 +1,11 @@
-'use strict';
+'use strict ';
 var bcrypt = require('bcrypt');
 
 
 module.exports = function(sequelize, DataTypes) {
     var user = sequelize.define('user', {
-        firstName: DataTypes.STRING,
-        lastName: DataTypes.STRING,
+        firstname: DataTypes.STRING,
+        lastname: DataTypes.STRING,
         email: {
             type: DataTypes.STRING,
             validate: {
@@ -27,12 +27,12 @@ module.exports = function(sequelize, DataTypes) {
         facebookToken: DataTypes.STRING
     }, {
         hooks: {
-            beforeCreate: function(user, options, callback) {
+            beforeCreate: function(user, options, cb) {
                 if (user && user.password) {
-                    var hash = bcrypt.hashSync(user.password, 12);
+                    var hash = bcrypt.hashSync(user.password, 10);
                     user.password = hash;
                 }
-                callback(null, user);
+                cb(null, user);
             }
         },
 

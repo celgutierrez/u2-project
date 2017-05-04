@@ -1,7 +1,31 @@
-.yellow {
-    background-color: yellow;
+.black {
+    background-color: black;
+}
+
+.about-color {
+    background-color: black;
+    color: white;
+    padding: 1em 1em 2em 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.navi a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
 }
 
 h2 {
     font-family: 'Lobster', cursive;
+}
+
+.flower {
+    font-family: 'Indie Flower', cursive;
+}
+
+.bold {
+    font-weight: 700;
 }

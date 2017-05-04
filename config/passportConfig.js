@@ -1,31 +1,31 @@
 var passport = require('passport');
 var localStrategy = require('passport-local').Strategy;
-var db = require('../models');
+var database = require('../models');
 var facebookStrategy = require('passport-facebook').Strategy;
 
-passport.serializeUser(function(user, cb) {
-    cb(null, user.id);
+passport.serializeUser(function(user, callback) {
+    callback(null, user.id);
 });
 
-passport.deserializeUser(function(id, cb) {
-    db.user.findById(id).then(function(user) {
-        cb(null, user);
-    }).catch(cb);
+passport.deserializeUser(function(id, callback) {
+    database.user.findById(id).then(function(user) {
+        callback(null, user);
+    }).catch(callback);
 });
 
 passport.use(new localStrategy({
     usernameField: 'email',
     passwordField: 'password'
-}, function(email, password, cb) {
-    db.user.findOne({
+}, function(email, password, callback) {
+    database.user.findOne({
         where: { email: email }
     }).then(function(user) {
         if (!user || !user.isValidPassword(password)) {
-            cb(null, false); //No user or bad password
+            callback(null, false); //No user or bad password
         } else {
-            cb(null, user); //User is allowed
+            callback(null, user); //User is allowed
         }
-    }).catch(cb);
+    }).catch(callback);
 }));
 
 passport.use(new facebookStrategy({
@@ -34,12 +34,12 @@ passport.use(new facebookStrategy({
     callbackURL: process.env.BASE_URL = '/auth/callback/facebook',
     profileFields: ['id', 'email', 'displayName'],
     enableProof: true
-}, function(accessToken, refreshToken, profile, cb) {
+}, function(accessToken, refreshToken, profile, callback) {
     ///see if we can get the email from the fb profile
     var email = profile.emails ? profile.emails[0].value : null;
 
     ///see if user already exists in database
-    db.userfindOne({
+    database.user.findOne({
             where: { email: email }
         })
         .then(function(existingUser) {
@@ -49,11 +49,11 @@ passport.use(new facebookStrategy({
                     facebookId: profile.id,
                     facebookToken: accessToken
                 }).then(function(updatedUser) {
-                    cb(null, updatedUser);
-                }).catch(cb);
+                    callback(null, updatedUser);
+                }).catch(callback);
             } else {
                 ///new user
-                db.user.findOrCreate({
+                database.user.findOrCreate({
                     where: { facebookId: profile.id },
                     defaults: {
                         facebookToken: accessToken,
@@ -64,15 +64,15 @@ passport.use(new facebookStrategy({
                 }).spread(function(user, wasCreated) {
                     if (wasCreated) {
                         ///new user, created account
-                        cb(null, user);
+                        callback(null, user);
                     } else {
                         ///not new user, just update token
                         user.facebookToken = accessToken;
                         user.save().then(function() {
-                            cb(null, user);
-                        }).catch(cb);
+                            callback(null, user);
+                        }).catch(callback);
                     }
-                }).catch(cb);
+                }).catch(callback);
             }
         });
 }));
