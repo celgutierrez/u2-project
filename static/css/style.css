@@ -18,6 +18,16 @@
     font-weight: 600;
 }
 
+.space {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.navi a:hover {
+    text-decoration: none;
+    color: grey;
+}
+
 h2 {
     font-family: 'Lobster', cursive;
 }
@@ -28,4 +38,14 @@ h2 {
 
 .bold {
     font-weight: 700;
+}
+
+.deco a {
+    text-decoration: none;
+    color: white;
+}
+
+.deco a:hover {
+    color: white;
+    text-decoration: none;
 }

@@ -38,7 +38,7 @@ app.get('/', function(req, res) {
     res.render('homepage');
 });
 
-app.get('/select', function(req, res) {
+app.get('/subscribe', function(req, res) {
     res.render('select');
 });
 

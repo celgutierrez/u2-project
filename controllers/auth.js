@@ -3,7 +3,7 @@ var passport = require('../config/passportConfig');
 var db = require('../models');
 var router = express.Router();
 
-router.get('/login', function(req, res, next) {
+router.get('/login', function(req, res) {
     res.render('login');
 });
 
