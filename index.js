@@ -38,13 +38,14 @@ app.get('/', function(req, res) {
     res.render('homepage');
 });
 
-app.get('/subscribe', function(req, res) {
+app.get('/auth/subscribe', isLoggedIn, function(req, res) {
     res.render('select');
 });
 
 app.get('/auth/myaccount', isLoggedIn, function(req, res) {
     res.render('myaccount');
 });
+
 
 
 app.use('/auth', require('./controllers/auth'));

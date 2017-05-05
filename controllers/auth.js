@@ -15,6 +15,7 @@ router.post('/login', passport.authenticate('local', {
     failureFlash: 'Login failed, try again'
 }));
 
+
 router.get('/signup', function(req, res) {
     res.render('signup');
 });
@@ -30,7 +31,7 @@ router.post('/signup', function(req, res, next) {
     }).spread(function(user, wasCreated) {
         if (wasCreated) {
             passport.authenticate('local', {
-                successRedirect: '/auth/myaccount',
+                successRedirect: '/auth/subscribe',
                 successFlash: 'Welcome to BeeHelpful!',
                 failureRedirect: '/auth/login',
                 failureFlash: 'There was an error logging in, please re-try!'

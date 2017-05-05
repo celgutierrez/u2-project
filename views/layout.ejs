@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>BeeHelpful</title>
+	<link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<link href="/css/style.css" rel="stylesheet" type="text/css">
 	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
@@ -20,9 +21,9 @@
 <div class="col-md-5 col-sm-4"></div>
 <%if(!currentUser){%>
 <div class="col-md-1 col-sm-4 col-xs-12 navbar-nav"><a href="/auth/login">Login</a></div>
-<div class="col-md-2 col-sm-4 col-xs-12 navbar-nav"><a href="/subscribe">Start Bee-ing Helpful!</a></div>
+<div class="col-md-2 col-sm-4 col-xs-12 navbar-nav"><a href="/auth/signup">Subscribe!</a></div>
 <%} else{%>
-<div class="col-md-1 col-sm-4 col-xs-12" navbar-nav"><a href="/auth/myaccount">My Account</a></div>
+<div class="col-md-2 col-sm-4 col-xs-12" navbar-nav"><a href="/auth/myaccount">My Account</a></div>
 <div class="col-md-1 col-sm-4 col-xs-12 navbar-nav"><a href="/auth/logout">Logout</a></div>
 <%}%>
 
@@ -39,18 +40,17 @@
 <div class="col-md-3 col-sm-4 col-xs-12"><h4 class="bold">Get Started</h4>
 <p>Lorem ipsum dolor sit amet, quas porro veniam pri eu, vivendo percipit argumentum ei cum. Copiosae elaboraret quaerendum mea te, mnesarchum dissentias definitionem cu his. Ferri recusabo intellegat vis in. Nisl tollit urbanitas id nec, ad labitur habemus ius. Eu mel solet prompta iudicabit.</p>
 </div>
-<div class="col-md-3 col-sm-4 col-xs-12"><h4 class="bold">Account</h4>
-<p>Lorem ipsum dolor sit amet, quas porro veniam pri eu, vivendo percipit argumentum ei cum. Copiosae elaboraret quaerendum mea te, mnesarchum dissentias definitionem cu his. Ferri recusabo intellegat vis in. Nisl tollit urbanitas id nec, ad labitur habemus ius. Eu mel solet prompta iudicabit.</p>
-</div>
+
 <div class="col-md-3 col-sm-4 col-xs-12"><h4 class="bold">About Us</h4>
-<p>Lorem ipsum dolor sit amet, quas porro veniam pri eu, vivendo percipit argumentum ei cum. Copiosae elaboraret quaerendum mea te, mnesarchum dissentias definitionem cu his. Ferri recusabo intellegat vis in. Nisl tollit urbanitas id nec, ad labitur habemus ius. Eu mel solet prompta iudicabit.</p>
+<p>We love bees. Lorem ipsum dolor sit amet, quas porro veniam pri eu, vivendo percipit argumentum ei cum. Copiosae elaboraret quaerendum mea te, mnesarchum dissentias definitionem cu his. Ferri recusabo intellegat vis in. Nisl tollit urbanitas id nec, ad labitur habemus ius. Eu mel solet prompta iudicabit.</p>
 </div>
 <div class="col-md-3 col-sm-4 col-xs-12"><h4 class="bold">Stay In Touch</h4>
 <p>This is where the social media things will go. </p>
 <p>
 <form>
 <label><h4>Sign Up For Our Newsletter!</h4></label>
-	<input type="text" name="email" placeholder="Email address"><button type="submit" class="btn btn-primary">Submit</button>
+<p>
+	<input type="text" name="email" placeholder="Email address"><button type="submit" class="deco">Submit</button></p>
 </form>
 </p>
 </div>
