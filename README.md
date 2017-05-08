@@ -9,7 +9,7 @@ An app that allows for users to subscribe to a monthly box of plant seeds native
 <li>Express EJS</li>
 </ul>
 
-API: Facebook & USDA Plant Database
+API: Facebook & Bootleg USDA Plant Database
 
 <h2>Unsolved Issues:</h2>
 <ul>
