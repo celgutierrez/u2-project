@@ -26,12 +26,13 @@ router.post('/signup', function(req, res, next) {
         defaults: {
             'firstname': req.body.firstName,
             'lastname': req.body.lastName,
-            'password': req.body.password
+            'password': req.body.password,
+            'state': req.body.state
         }
     }).spread(function(user, wasCreated) {
         if (wasCreated) {
             passport.authenticate('local', {
-                successRedirect: '/auth/subscribe',
+                successRedirect: '/auth/myaccount',
                 successFlash: 'Welcome to BeeHelpful!',
                 failureRedirect: '/auth/login',
                 failureFlash: 'There was an error logging in, please re-try!'
@@ -53,6 +54,8 @@ router.get('/logout', function(req, res) {
     req.flash('success', 'You have logged out of your account');
     res.redirect('/');
 });
+
+
 
 ///FACEBOOK AUTH
 
