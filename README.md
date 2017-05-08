@@ -13,7 +13,7 @@ API: Facebook & USDA Plant Database
 
 <h2>Unsolved Issues:</h2>
 <ul>
-<li>Lots.</li>
+Lots.
 <li>Password hashing works on the database, but doesn't hash outright on page. </li>
 <li>FB login works...sometimes.</li>
 <li>Delete doesn't work properly.</li>
