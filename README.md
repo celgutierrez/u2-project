@@ -14,4 +14,4 @@ API: Facebook & USDA Plant Database
 Lots.
 Password hashing works on the database, but doesn't hash outright.
 FB login works...sometimes.
-
+Delete doesn't work properly.

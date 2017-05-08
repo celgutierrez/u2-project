@@ -1,6 +1,6 @@
 $('.delete').on('click', function(e) {
     e.preventDefault();
-    var url = $(this).attr('href');
+    var url = $(this).attr('user');
 
     $.ajax({
         method: 'DELETE',

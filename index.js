@@ -53,7 +53,7 @@ app.get('/auth/subscribe', isLoggedIn, function(req, res) {
 });
 
 app.delete('/auth/myaccount', function(req, res) {
-    var accountDelete = req.params.currentUser;
+    var accountDelete = req.params.user;
 
     res.send({ message: 'Account Deleted' });
 });
