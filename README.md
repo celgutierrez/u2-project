@@ -14,6 +14,6 @@ API: Facebook & Bootleg USDA Plant Database
 <h2>Unsolved Issues:</h2>
 <ul>
 Lots.
-<li>Password hashing works on the database, but doesn't hash outright on page. </li>
-<li>Delete doesn't work properly.</li>
+<li>Delete doesn't work.</li>
+<li>Database relationship for USDA Plants to 1 user is iffy at best.</li>
 </ul>
