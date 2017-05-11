@@ -15,5 +15,5 @@ API: Facebook & Bootleg USDA Plant Database
 <ul>
 Lots.
 <li>Delete doesn't work.</li>
-<li>Database relationship for USDA Plants to 1 user is iffy at best.</li>
+<li>Was unable to properly connect USDA Plant database to users, removed for presentation.</li>
 </ul>
