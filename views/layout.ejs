@@ -6,6 +6,8 @@
 	<link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<link href="/css/style.css" rel="stylesheet" type="text/css">
+<script src="https://use.fontawesome.com/53a7f101f4.js"></script>
+
 	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
@@ -31,6 +33,8 @@
 </div>
 </div>
 
+<% include partials/alerts %>
+
 <%- body%>
 
 <hr>
@@ -38,21 +42,25 @@
 <h2 class= "text-center">Save The Bees!</h2>
 <div class="row">
 <div class="col-md-3 col-sm-4 col-xs-12"><h4 class="bold">Get Started</h4>
-<p>Wow links</p>
+
+<p>
+<ul>
+<li><a href="/#about">About</a></li>
+<li><a href="/auth/signup">Sign Up</a></li>
+
+</ul>
+</p>
 </div>
 
-<div class="col-md-3 col-sm-4 col-xs-12"><h4 class="bold">About Us</h4>
-<p>We love bees. Duh. Lorem ipsum dolor sit amet, quas porro veniam pri eu, vivendo percipit argumentum ei cum. Copiosae elaboraret quaerendum mea te, mnesarchum dissentias definitionem cu his. Ferri recusabo intellegat vis in. Nisl tollit urbanitas id nec, ad labitur habemus ius. Eu mel solet prompta iudicabit.</p>
+<div class="col-md-3 col-sm-4 col-xs-12"><h4 class="bold">About</h4>
+<p>The goal is to always be environment friendly and especially, bee friendly.</p>
 </div>
 <div class="col-md-3 col-sm-4 col-xs-12"><h4 class="bold">Stay In Touch</h4>
-<p>This is where the social media things would go. <img class="img-fluid" src="https://s-media-cache-ak0.pinimg.com/736x/60/53/95/6053954a3dd4ff104743099a1d7ccec3.jpg" alt="if i had any"></p>
-<p>
-<form>
-<label><h4>Sign Up For Our Newsletter!</h4></label>
-<p>
-	<input type="text" name="email" placeholder="Email address"><button type="submit" class="deco">Submit</button></p>
-</form>
+<p><i class="fa fa-facebook-official fa-2x" aria-hidden="true"></i> <i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i>
+<i class="fa fa-instagram fa-2x" aria-hidden="true"></i>
+
 </p>
+
 </div>
 
 </div>
