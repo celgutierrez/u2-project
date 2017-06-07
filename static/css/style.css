@@ -15,14 +15,18 @@ body {
 .about-color {
     background-color: black;
     color: white;
-    padding: 1em 1em 2em 1em;
-    margin-top: 1em;
-    margin-bottom: 1em;
+    padding: 7em 1em 7em 1em;
+    margin-top: 5em;
+    margin-bottom: 5em;
 }
 
 .space {
     margin-top: 1em;
     margin-bottom: 1em;
+}
+
+.navi {
+    margin-top: 0;
 }
 
 .navi a {
@@ -48,6 +52,32 @@ h2 {
 
 .bold {
     font-weight: 700;
+}
+
+.sub-box {
+    background-image: url(../img/subbox.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 7em 1em 7em 1em;
+    margin-top: 5em;
+    margin-bottom: 5em;
+    color: black;
+}
+
+.bg-text {
+    background-color: rgba(0, 0, 0, .5);
+    padding: 1em 1em 3em 1em;
+    color: white;
+}
+
+.contained {
+    height: 100%;
+    width: 100%;
+}
+
+.bee-contained {
+    height: 50%;
+    width: 100%
 }
 
 .deco a {

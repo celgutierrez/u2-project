@@ -58,7 +58,20 @@ app.delete('/auth/myaccount', function(req, res) {
     res.send({ message: 'Account Deleted' });
 });
 
-
+app.get('/plantselection', isLoggedIn, function(req, res) {
+    var qs = {
+        s: 'search'
+    };
+    request('https://plantsdb.xyz/search', function(error, response, body) {
+        if (!error && response.statusCode == 200) {
+            var dataObj = JSON.parse(body);
+            var rand = Math.floor(Math.random() * dataObj.returned);
+            console.log('plant selected', dataObj.data[rand]["Common_Name"]);
+            //res.send(dataObj.data[rand]);
+            res.render('plant', { plant: dataObj.data[rand]['Common_Name'] });
+        }
+    });
+});
 
 
 
