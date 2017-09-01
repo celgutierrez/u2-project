@@ -1,5 +1,5 @@
 body {
-    margin-top: 1em;
+    margin-top: 3em;
 }
 
 .deco {
@@ -54,14 +54,29 @@ h2 {
     font-weight: 700;
 }
 
-.sub-box {
-    background-image: url(../img/subbox.jpeg);
+.sub-box,
+.bg-top {
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 7em 1em 7em 1em;
+    overflow: hidden;
     margin-top: 5em;
+    display:inline-block;
     margin-bottom: 5em;
     color: black;
+}
+
+.bg-top {
+    background-image: url(../img/littlebee.jpg);
+    padding: 9em 1em 9em 1em;
+}
+
+.sub-box {
+    background-image: url(../img/subbox.jpeg);
+    padding: 7em 1em 7em 1em;
+}
+
+.bg-top-txt {
+    color:white;
 }
 
 .bg-text {
