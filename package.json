@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/celgutierrez/u2-project#readme",
   "dependencies": {
+    "@mapbox/node-pre-gyp": "^1.0.0",
     "bcrypt": "^5.0.0",
     "body-parser": "^1.17.1",
     "browser-sync": "^2.18.11",
