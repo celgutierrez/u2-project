@@ -16,5 +16,4 @@ API: Facebook & Bootleg USDA Plant Database
 Lots.
 <li>Delete doesn't work.</li>
 <li>Was unable to properly connect USDA Plant database to users, removed for presentation.</li>
-<li>Unable to properly deploy to Heroku</li>
 </ul>

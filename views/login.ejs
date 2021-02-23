@@ -1,26 +1,24 @@
-<div class="container-fluid space">
-<div class="row text-center">
-<div class="col-sm-6 col-xs-12">
-<h2>Welcome Back!</h2>
+<div class="login-page container-fluid">
+  <div class="row text-center">
+    <div class="col-sm-6 col-xs-12">
+      <h2>Welcome Back!</h2>
 
-<form action="/auth/login" method="POST">
-<legend>Login</legend>
-<div class="form-group">
-	<input type="text" name="email" id="login" placeholder="Email">
-	</div>
-	<div class="form-group">
-	<input type="password" name="password" id="password" placeholder="Password">
-	</div>
-	<button type="submit" class="deco" name="Submit">Sign In</button>
-</form>
-</div>
+      <form action="/auth/login" method="POST">
+      <legend>Login</legend>
+        <div class="form-group">
+        	<input type="text" name="email" id="login" placeholder="Email">
+        	</div>
+        	<div class="form-group">
+        	<input type="password" name="password" id="password" placeholder="Password">
+      	</div>
+      	<button type="submit" class="deco" name="Submit">Sign In</button>
+      </form>
+    </div>
 
-<div class="col-sm-6 col-xs-12">
-<h2>Or, login with Facebook!</h2>
-<i class="fa fa-facebook-official fa-2x"aria-hidden="true"></i><a href="/auth/facebook"> Login!</a>
-</div>
-</div>
-</div>
-</div>
+    <div class="col-sm-6 col-xs-12">
+      <h2>Or, login with Facebook!</h2>
+      <i class="fa fa-facebook-official fa-2x"aria-hidden="true"></i><a href="/auth/facebook"> Login!</a>
+    </div>
+  </div>
 </div>
 
